@@ -2,25 +2,6 @@
 # SQL Learning Notes — EV Battery Project
 
 ---
-
-## Day [X] — [Topic Name]
-
-**Date:** [DD-MM-YYYY]
-
-### 1. What I Learned Today
-[Write 1-2 sentences in YOUR words about what this concept does]
-
-### 2. Key Rules / Points
-- [Rule 1 in your words]
-- [Rule 2 in your words]
-- [Rule 3 in your words]
-
-### 3. Example Query I Wrote
-```sql
-[paste the actual query you ran in SSMS]
-
-___________________________________________________________________
-
 ## Day [1] — [Aggregate Functions]
 
 **Date:** [19-05-2026]
@@ -37,3 +18,24 @@ I learned Average, SUM, Count, MIN, MAX
 ### 3. Example Query I Wrote
 ```sql
 Select Count(*) from ev_battery_Data;
+
+
+
+___________________________________________________________________
+
+
+## Day [X] — [Topic Name]
+
+**Date:** [DD-MM-YYYY]
+
+### 1. What I Learned Today
+[Write 1-2 sentences in YOUR words about what this concept does]
+
+### 2. Key Rules / Points
+- [Rule 1 in your words]
+- [Rule 2 in your words]
+- [Rule 3 in your words]
+
+### 3. Example Query I Wrote
+```sql
+[paste the actual query you ran in SSMS]
