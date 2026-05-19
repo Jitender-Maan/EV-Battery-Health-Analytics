@@ -70,4 +70,20 @@
 - [ ] Test SELECT TOP 10 query in SSMS
 
 ## Today's Date Context
-Day 1 was completed on 19-05-2026
+Day 1 was completed on 18-05-2026
+
+Progress Report
+Current Phase: Phase 1 (SQL)
+Completed:
+Day 1: Aggregate Functions (COUNT, AVG, SUM, etc.)
+Day 2: GROUP BY, ORDER BY, and ROUND().
+Database: EV_Projects
+Table: ev_battery_data (10,000 rows verified).
+Latest Insight: Identified NMC as the battery type with the highest internal resistance (~0.0349).
+Next Topic: Day 3 — The HAVING Clause
+Objective: Learning how to filter groups (not just rows).
+Problem to solve: "How do I filter the results of an aggregate function?" (e.g., Show me only battery types where the average resistance is greater than X).
+Why it matters: In your EV project, you’ll need this to isolate "problematic" car models or battery batches that fall below specific health thresholds.
+See you tomorrow, Jitender. Great work today.
+## Today's Date Context
+Day 2 was completed on 19-05-2026
