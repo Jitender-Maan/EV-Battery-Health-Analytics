@@ -3,10 +3,7 @@
 ## About Me
 - Name: Jitender Maan
 - GitHub: github.com/Jitender-Maan
-- Work PC only (SSMS available)
-- Working hours: Mon-Sat, 9 AM to 8 PM
 - Daily project time: 1-2 hours
-- No personal PC, no work on Sundays
 
 ## Skill Level (Honest)
 - Python: Weak (beginner)
