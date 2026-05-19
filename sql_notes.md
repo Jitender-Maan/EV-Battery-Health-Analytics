@@ -1,4 +1,3 @@
-
 # SQL Learning Notes — EV Battery Project
 
 ---
@@ -29,11 +28,39 @@ Let's take an example of average aggregate function, it works only on nos. but i
 
 ### 6. Real-World Use In My Project
 I use Count(*) to count total rows to confirm that the data imported properly.
-
-
-
 ___________________________________________________________________
 
+## Day 2 — Aggregation and Sorting
+**Date:** 19-02-2026
+
+### 1. What I Learned Today
+Today i learned Group By & Order By Clauses, Also pactice on AVG, Count Functions.
+Group By is used to Group certain column for clearer picture.
+Order By is used to order the result in ascending & descending order.
+Also learned about Round Function which round off to n number of decimals 
+
+### 2. Key Rules / Points
+- Use DESC for descending & ASC for ascending durng sorting using ORDER BY.
+- Use Round function with aggrigate functions to get a good result.
+- First use Group By then use Order By in the Query
+
+### 3. Example Query I Wrote
+```sql
+SELECT Battery_Type, ROUND(AVG(Internal_Resistance_Ohm), 4)
+FROM dbo.ev_battery_data
+GROUP BY Battery_Type
+ORDER BY ROUND(AVG(Internal_Resistance_Ohm), 4) DESC;
+```
+Result: NMC	0.0349 
+        LFP	0.0261
+
+### 4. What Confused Me
+   I confused in ordering result by average of SoH_Percent Column.
+### 5. How It Got Cleared
+   I'll try to write te query & got 1-2 errors, then got the understanding how to use it. & Result Confirmed all.  
+### 6. Real-World Use In My Project
+   Round Function used with Internal_Resistance_Ohm Column in this project.
+___________________________________________________________________
 
 ## Day [X] — [Topic Name]
 
