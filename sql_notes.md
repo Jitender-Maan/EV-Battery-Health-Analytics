@@ -40,7 +40,7 @@ Order By is used to order the result in ascending & descending order.
 Also learned about Round Function which round off to n number of decimals 
 
 ### 2. Key Rules / Points
-- Use DESC for descending & ASC for ascending durng sorting using ORDER BY.
+- Use DESC for descending & ASC for ascending durng filtering using ORDER BY.
 - Use Round function with aggrigate functions to get a good result.
 - First use Group By then use Order By in the Query
 
@@ -60,6 +60,42 @@ Result: NMC	0.0349
    I'll try to write te query & got 1-2 errors, then got the understanding how to use it. & Result Confirmed all.  
 ### 6. Real-World Use In My Project
    Round Function used with Internal_Resistance_Ohm Column in this project.
+
+___________________________________________________________________
+
+## Day 3 — HAVING v/s WHERE
+
+**Date:** 20-05-2026
+
+### 1. What I Learned Today
+Today I Learned "Where to use Having & Where in SQL Queries & There Sequence"
+Both used for filtering the output.
+
+### 2. Key Rules / Points
+- Where works before group by to filter column data
+- Having works on group set cuz it wait for grouping then filtering data 
+- Where used before group by & having used after groupby
+
+### 3. Example Query I Wrote
+```sql
+USE EV_Projects;
+SELECT Car_Model, ROUND(AVG(SoH_Percent),2)
+FROM dbo.ev_battery_data
+WHERE Fast_Charge_Ratio > 0.5
+GROUP BY Car_Model
+Having AVG(SoH_Percent) < 95;
+```
+Result:
+Ford Mustang Mach-E	94.71
+Hyundai Ioniq 5	94.5
+Tesla Model 3	94.52
+
+### 4. What Confused Me
+       I Confused here with having sequence
+### 5. How It Got Cleared
+       When i try to put having below groupby & got result then confusion cleared
+### 6. Real-World Use In My Project
+       When ever we group our result in query & want to filter that we use having in the project
 ___________________________________________________________________
 
 ## Day [X] — [Topic Name]
