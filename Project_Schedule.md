@@ -6,13 +6,13 @@
 
 ### Day	Date	Day	Topic	9–10 AM	10–11 AM
 
-~~1	18-05-2026	Mon	Aggregate Functions	Learn COUNT, SUM, AVG, MIN, MAX	Practice + Notes
+~~1	18-05-2026	Mon	Aggregate Functions	Learn COUNT, SUM, AVG, MIN, MAX	Practice + Notes~~
 
-2	19-05-2026	Tue	GROUP BY + ORDER BY	Learn grouping & sorting	Practice + Notes
+~~2	19-05-2026	Tue	GROUP BY + ORDER BY	Learn grouping & sorting	Practice + Notes~~
 
-3	20-05-2026	Wed	HAVING vs WHERE	Filter rows vs groups	Practice + Notes
+~~3	20-05-2026	Wed	HAVING vs WHERE	Filter rows vs groups	Practice + Notes~~
 
-4	21-05-2026	Thu	AND / OR / Parentheses	Logical operators	Practice + Notes~~
+~~4	21-05-2026	Thu	AND / OR / Parentheses	Logical operators	Practice + Notes~~
 
 5	22-05-2026	Fri	CASE WHEN	Conditional categories	Practice + Notes
 
