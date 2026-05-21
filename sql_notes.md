@@ -98,6 +98,39 @@ Tesla Model 3	94.52
        When ever we group our result in query & want to filter that we use having in the project
 ___________________________________________________________________
 
+## Day 4 — Operators(AND / OR)
+
+**Date:** 21-05-2026
+
+### 1. What I Learned Today
+Today I Learned about operators
+First I learn about AND operator which give result when both conditions are true
+Then learnt about OR Operater which give result when one of the condition is True.
+Lastly learned about mixed operation like we use AND, OR & Parentheses in a single query
+
+### 2. Key Rules / Points
+- For AND Operator Both conditions Should be True
+- For OR Operator one of the condition to be True
+- Using Both Operators in a Query, Parentheses makes a real difference in result
+
+### 3. Example Query I Wrote
+```sql
+SELECT COUNT(Vehicle_ID) AS V_ID
+FROM dbo.ev_battery_data
+WHERE Car_Model = 'Tesla Model 3' AND (Vehicle_Age_Months > 60 OR Total_Charging_Cycles > 800);
+```
+Result: 778
+
+### 4. What Confused Me
+       Confused in using both operator in a single query
+### 5. How It Got Cleared
+       Using Parentheses 
+### 7. Real-World Use In My Project
+       When ever we have more than one condition we use operators in the project     
+   
+
+___________________________________________________________________
+
 ## Day [X] — [Topic Name]
 
 **Date:** [DD-MM-YYYY]
