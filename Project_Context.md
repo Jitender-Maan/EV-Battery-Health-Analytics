@@ -84,3 +84,33 @@ Why it matters: In your EV project, you’ll need this to isolate "problematic" 
 See you tomorrow, Jitender. Great work today.
 ## Today's Date Context
 Day 2 was completed on 19-05-2026
+
+EV Battery Project — SQL Bootcamp Progress
+User: Jitender Maan
+Database: EV_Projects | Table: ev_battery_data (10,000 rows verified)
+Phase: 1 (SQL in SSMS)
+
+Completed Days:
+Day 1: Aggregate Functions (COUNT, AVG, SUM, MIN, MAX)
+Day 2: GROUP BY + ORDER BY + ROUND
+Day 3: HAVING vs WHERE (filter rows vs filter groups)
+Day 4: Logical Operators (AND, OR, Parentheses priority)
+Key Insights Discovered:
+Wuling Air EV has the highest average SoH (96.99%)
+NMC battery type has the highest internal resistance (0.0349)
+267 vehicles are in the "stressed" group (high temp + high discharge)
+778 Tesla Model 3s are at risk (age > 60 months OR cycles > 800)
+Next Topic: Day 5 — CASE WHEN
+Creating custom categories (e.g., "Healthy", "Warning", "Critical")
+Conditional logic in SELECT statements
+Will feed directly into Power BI dashboard (Phase 3)
+Working Rules (CRITICAL):
+✅ One question at a time, wait for answer
+✅ Explain concept BEFORE applying
+❌ NEVER give ready-made queries or code
+❌ No insights/comparisons unless asked
+✅ User writes own code and notes
+✅ Notes follow fixed template in sql_notes.md
+
+## Today's Date Context
+Day 3 & 4 was completed on 21-05-2026
