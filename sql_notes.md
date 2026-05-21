@@ -125,7 +125,7 @@ Result: 778
        Confused in using both operator in a single query
 ### 5. How It Got Cleared
        Using Parentheses 
-### 7. Real-World Use In My Project
+### 6. Real-World Use In My Project
        When ever we have more than one condition we use operators in the project     
    
 
