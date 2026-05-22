@@ -14,7 +14,7 @@
 
 ~~4	21-05-2026	Thu	AND / OR / Parentheses	Logical operators	Practice + Notes~~
 
-5	22-05-2026	Fri	CASE WHEN	Conditional categories	Practice + Notes
+~~5	22-05-2026	Fri	CASE WHEN	Conditional categories	Practice + Notes~~
 
 6	23-05-2026	Sat	JOINS (Intro)	INNER JOIN concept	Practice + Notes
 
