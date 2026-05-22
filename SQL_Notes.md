@@ -173,6 +173,12 @@ END;
 
 ```
 Result:
+Healthy	Moderate	3299
+Healthy	Heavy	1088
+Warning	Moderate	76
+Healthy	Light	5003
+Critical	Heavy	1
+Warning	Heavy	533
 
 ### 4. What Confused Me
        I try 2 CASE WHEN in Same Query without understanding the logic, that Confuse me a a lot.
