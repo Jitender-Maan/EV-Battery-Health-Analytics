@@ -128,6 +128,58 @@ Result: 778
 ### 6. Real-World Use In My Project
        When ever we have more than one condition we use operators in the project     
    
+___________________________________________________________________
+
+## Day 5 — CASE WHEN
+
+**Date:** 22-05-2026
+
+### 1. What I Learned Today
+Today I learned a very intersting topic which is called CASE WHEN Switch Statement.
+This Case When statement is helpful when you have more than one Statement
+
+### 2. Key Rules / Points
+- Statement Starts With CASE Then Conditions & Then Ends with END Statement
+- We also can use CASE WHEN Switch Statements more than one time.
+- WE Use Aggregate Functions after CASE WHEN END
+
+### 3. Example Query I Wrote
+```sql
+SELECT
+CASE 
+	WHEN SoH_Percent > 90 THEN 'Healthy'
+	WHEN SoH_Percent > 75 THEN 'Warning'
+	ELSE 'Critical' 
+END
+AS Battery_Health_Status,
+CASE 
+	WHEN Total_Charging_Cycles > 800 THEN 'Heavy'
+	WHEN Total_Charging_Cycles > 400 THEN 'Moderate'
+	ELSE 'Light' 
+END
+AS Total_Charging_Cycles,
+COUNT(*) AS Total_Vehicles
+FROM dbo.ev_battery_data
+GROUP BY CASE 
+	WHEN SoH_Percent > 90 THEN 'Healthy'
+	WHEN SoH_Percent > 75 THEN 'Warning'
+	ELSE 'Critical' 
+END,
+CASE 
+	WHEN Total_Charging_Cycles > 800 THEN 'Heavy'
+	WHEN Total_Charging_Cycles > 400 THEN 'Moderate'
+	ELSE 'Light' 
+END;
+
+```
+Result:
+
+### 4. What Confused Me
+       I try 2 CASE WHEN in Same Query without understanding the logic, that Confuse me a a lot.
+### 5. How It Got Cleared
+       First i Understand how to use more than 1 CASE WHEN, Then i Feel Confident & the Results Cleared all the Confussion.
+### 6. Real-World Use In My Project
+       When using more than one condition to get the desired result like the query i used today.
 
 ___________________________________________________________________
 
