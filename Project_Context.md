@@ -114,3 +114,39 @@ Working Rules (CRITICAL):
 
 ## Today's Date Context
 Day 3 & 4 was completed on 21-05-2026
+
+EV Battery Project — SQL Bootcamp Progress
+User: Jitender Maan
+Database: EV_Projects | Table: ev_battery_data (10,000 rows verified)
+Phase: 1 (SQL in SSMS) | Schedule: 9–11 AM, Mon–Sat
+
+Completed Days:
+Day 1: Aggregate Functions (COUNT, AVG, SUM, MIN, MAX)
+Day 2: GROUP BY + ORDER BY + ROUND
+Day 3: HAVING vs WHERE
+Day 4: AND / OR / Parentheses
+Day 5: CASE WHEN (Single + Combined categories)
+Key Insights Discovered So Far:
+Wuling Air EV = highest avg SoH (96.99%)
+NMC battery = highest internal resistance (0.0349)
+267 vehicles = stressed group (high temp + discharge)
+778 Tesla Model 3s = at-risk (age OR cycles)
+Battery Health distribution: 9,390 Healthy / 609 Warning / 1 Critical
+Usage Level: 5,003 Light / 3,375 Moderate / 1,622 Heavy
+Critical battery is in Heavy usage segment → confirms heavy usage = risk
+Next Topic: Day 6 — JOINS (INNER JOIN)
+Date: 23-05-2026 (Saturday)
+Will introduce concept of joining tables
+May need to create a second small lookup table for practice
+Working Rules (CRITICAL — DO NOT BREAK):
+✅ One question at a time, wait for answer
+✅ Explain concept BEFORE applying
+❌ NEVER give ready-made queries or full code
+❌ No insights/comparisons unless asked
+✅ User writes own code and notes
+✅ Notes follow fixed template in sql_notes.md
+✅ Step back immediately if user says "don't help me"
+
+## Today's Date Context
+Day 5 was completed on 22-05-2026
+
