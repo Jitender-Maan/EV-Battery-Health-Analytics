@@ -189,6 +189,44 @@ Warning	Heavy	533
 
 ___________________________________________________________________
 
+## Day 6 — INNER JOIN
+
+**Date:** 23-05-2026
+
+### 1. What I Learned Today
+Today I learned INNER JOIN which join two tables in a manner that we got output from both the tables, But there is a condition in INNER JOIN that it shows rows from table 2 only when matched with table 1. 
+
+### 2. Key Rules / Points
+- Join 2 Tables
+- Shows matching data
+- USE ON for defining commom column from both the Table
+
+### 3. Example Query I Wrote
+```sql
+SELECT  t1.Car_Model,
+ROUND(AVG(t1.SoH_Percent), 2) AS Avg_SoH_Percent
+FROM dbo.ev_battery_data AS t1
+INNER JOIN dbo.car_info AS t2
+ON t1.Car_Model = t2.Car_Model
+WHERE t2.Launch_Year >= 2020
+GROUP BY t1.Car_Model
+ORDER BY Avg_SoH_Percent DESC;
+```
+Result:
+		BYD Atto 3	96.92
+		Ford Mustang Mach-E	95.07
+		Hyundai Ioniq 5	95.04
+
+### 4. What Confused Me
+       I Confused when I run Query & a column gives error.
+### 5. How It Got Cleared
+       Then I realize I forget to include Group By Clause, then I GROUP BY that Column & the error & my confussion cleared.  
+### 6. Real-World Use In My Project
+       When ever working with two Tables to get the desired Results from them.
+
+
+___________________________________________________________________
+
 ## Day [X] — [Topic Name]
 
 **Date:** [DD-MM-YYYY]
