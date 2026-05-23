@@ -16,7 +16,7 @@
 
 ~~5	22-05-2026	Fri	CASE WHEN	Conditional categories	Practice + Notes~~
 
-6	23-05-2026	Sat	JOINS (Intro)	INNER JOIN concept	Practice + Notes
+~~6	23-05-2026	Sat	JOINS (Intro)	INNER JOIN concept	Practice + Notes~~
 
 —	24-05-2026	Sun	🛌 OFF	—	—
 
