@@ -150,3 +150,144 @@ Working Rules (CRITICAL — DO NOT BREAK):
 ## Today's Date Context
 Day 5 was completed on 22-05-2026
 
+EV Battery Health Analytics — New Chat Summary
+User: Jitender Maan
+Repo: EV-Battery-Health-Analytics-
+Current Phase: Phase 1 — SQL
+Tool: SSMS
+Database: EV_Projects
+Main Table: dbo.ev_battery_data
+Extra Table Created: dbo.car_info
+Rows in main table: 10,000 verified
+
+Project Context
+Project Title: Predictive Battery Health Analytics for Electric Vehicles
+Dataset: EV Battery Degradation & Charge (Kaggle)
+Target Variable: SoH_Percent
+Problem Type: Regression
+Reason: Battery_Status is too imbalanced for classification
+User Skill Level
+Python: Beginner
+SQL: Beginner
+Power BI: Intermediate
+Working Rules (IMPORTANT)
+Ask one question at a time
+Wait for my answer before moving forward
+Explain concept before I apply it
+I write my own code and notes
+Do not give ready-made queries/full solutions
+Do not overload
+Wrong answers = learning opportunity
+If I say “don’t help me,” step back immediately
+SQL Bootcamp Progress
+Day 1 — Aggregate Functions ✅
+Learned:
+
+COUNT, SUM, AVG, MIN, MAX
+Day 2 — GROUP BY / ORDER BY / ROUND ✅
+Learned:
+
+Grouping by category
+Sorting results
+Rounding aggregated output
+Day 3 — HAVING vs WHERE ✅
+Learned:
+
+WHERE filters rows
+HAVING filters grouped/aggregated results
+Day 4 — AND / OR / Parentheses ✅
+Learned:
+
+Multiple conditions
+Parentheses change logic and results
+Day 5 — CASE WHEN ✅
+Learned:
+
+Creating custom categories
+Using multiple CASE blocks in one query
+Repeating CASE logic in GROUP BY
+Day 6 — INNER JOIN ✅
+Learned:
+
+Joining 2 tables on matching column
+ON clause
+Table aliases
+Combined JOIN with WHERE + GROUP BY + ORDER BY
+Tables Available
+1. dbo.ev_battery_data
+Columns include:
+
+Vehicle_ID
+Car_Model
+Battery_Type
+Battery_Capacity_kWh
+Vehicle_Age_Months
+Total_Charging_Cycles
+Avg_Temperature_C
+Fast_Charge_Ratio
+Avg_Discharge_Rate_C
+Driving_Style
+Internal_Resistance_Ohm
+SoH_Percent
+Battery_Status
+2. dbo.car_info
+Created for JOIN practice:
+
+Car_Model
+Manufacturer_Country
+Launch_Year
+Inserted rows for:
+
+Ford Mustang Mach-E
+BYD Atto 3
+Wuling Air EV
+Hyundai Ioniq 5
+Tesla Model 3
+Key Findings So Far
+Wuling Air EV has highest average SoH: 96.99
+NMC has highest average internal resistance: 0.0349
+267 vehicles matched stressed condition:
+high temperature
+high discharge rate
+778 Tesla Model 3 matched age/cycle risk logic
+Battery health categories:
+Healthy: 9390
+Warning: 609
+Critical: 1
+Usage levels:
+Light: 5003
+Moderate: 3375
+Heavy: 1622
+Critical + Heavy exists: 1
+Average SoH by manufacturer country via JOIN:
+China highest: 96.95
+For models launched in 2020 or later, BYD Atto 3 had highest average SoH
+Notes System
+User maintains notes in sql_notes.md using this template:
+
+Markdown
+
+## Day [X] — [Topic]
+**Date:** DD-MM-YYYY
+
+### 1. What I Learned Today
+### 2. Key Rules / Points
+### 3. Example Query I Wrote
+### 4. What Confused Me
+### 5. How It Got Cleared
+### 6. Real-World Use In My Project
+Day 1 to Day 6 notes are completed.
+
+Current Schedule Context
+Working time for project: 9 AM – 11 AM
+Working days: Monday to Saturday
+Sunday off
+Bootcamp schedule started from 18-05-2026
+Next Topic
+Day 7 — LEFT JOIN / RIGHT JOIN / FULL JOIN
+Goal:
+
+Understand what happens when rows do not match
+Learn difference between INNER JOIN and other joins
+## Today's Date Context
+Day 6 was completed on 23-05-2026
