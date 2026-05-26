@@ -6,8 +6,8 @@
 - Daily project time: 1-2 hours
 
 ## Skill Level (Honest)
-- Python: Weak (beginner)
-- SQL: Beginner (thought I was intermediate, but proven beginner)
+- Python: Beginner
+- SQL: Beginner
 - Power BI: Intermediate, needs depth
 
 ## Project Details
