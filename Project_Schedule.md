@@ -18,9 +18,9 @@
 
 ~~6	23-05-2026	Sat	JOINS (Intro)	INNER JOIN concept	Practice + Notes~~
 
-—	24-05-2026	Sun	🛌 OFF	—	—
+~~—	24-05-2026	Sun	🛌 OFF	—	—~~
 
-7	25-05-2026	Mon	JOINS (Advanced)	LEFT/RIGHT/FULL JOIN	Practice + Notes
+~~7	25-05-2026	Mon	JOINS (Advanced)	LEFT/RIGHT/FULL JOIN	Practice + Notes~~
 
 8	26-05-2026	Tue	Subqueries	Nested queries	Practice + Notes
 
