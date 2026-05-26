@@ -224,7 +224,53 @@ Result:
 ### 6. Real-World Use In My Project
        When ever working with two Tables to get the desired Results from them.
 
+___________________________________________________________________
 
+## Day 7 — LEFT, RIGHT & FULL JOIN
+
+**Date:** 25-05-2026
+
+### 1. What I Learned Today
+Today i learnt about joins.
+First i learn about left join which gives you all rows from left table & matching rows from Right table.
+Left join also shows null for values not matching.
+Then i learn about Right join which gives you all rows from Right table & matching rows from Left table.
+Right join also shows null for values not matching.
+Lastly i learn about FULL outer join which gives you all rows from Both Right & Left Table.
+Shows null for values not matching.
+
+### 2. Key Rules / Points
+- LEFT join shows Null for not matching values from right table. 
+- RIGHT join shows Null for not matching values from left table.
+- FULL outer Join Shows all values from both table. shows null for not matching values. 
+
+### 3. Example Query I Wrote
+```sql
+SELECT DISTINCT
+t1.Car_Model,
+t2.Car_Model,
+t2.Manufacturer_Country
+FROM dbo.ev_battery_data AS t1
+FULL OUTER JOIN dbo.car_info AS t2
+ON t1.Car_Model = t2.Car_Model;
+
+```
+Result:
+NULL	Nissan Leaf	Japan
+NULL	Rivian R1T	USA
+BYD Atto 3	BYD Atto 3	China
+Ford Mustang Mach-E	Ford Mustang Mach-E	USA
+Hyundai Ioniq 5	Hyundai Ioniq 5	South Korea
+Kia EV6	NULL	NULL
+Tesla Model 3	Tesla Model 3	USA
+Wuling Air EV	Wuling Air EV	China
+
+### 4. What Confused Me
+	   NONE
+### 5. How It Got Cleared
+	   N/A	
+### 6. Real-World Use In My Project
+	   When Eevr working with more then one table & want to find missing values we use join. 	
 ___________________________________________________________________
 
 ## Day [X] — [Topic Name]
