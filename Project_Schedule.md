@@ -23,7 +23,7 @@ Daily Slot: 9:30 AM – 11:30 AM (Mon–Sat) | Off: Sundays
 
 ~~Day 9 — 27-05-2026 (Wed) | 9:30–10:30 AM: Nested queries basics | 10:30–11:30 AM: Practice + Notes~~
 
-Day 10 — 28-05-2026 (Thu) | 9:30–10:30 AM: Advanced nested queries | 10:30–11:30 AM: Practice + Notes
+~~Day 10 — 28-05-2026 (Thu) | 9:30–10:30 AM: Advanced nested queries | 10:30–11:30 AM: Practice + Notes~~
 
 Day 11 — 29-05-2026 (Fri) | 9:30–10:30 AM: ROW_NUMBER, RANK | 10:30–11:30 AM: Practice + Notes
 
