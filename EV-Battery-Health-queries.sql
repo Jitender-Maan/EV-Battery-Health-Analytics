@@ -29,15 +29,22 @@ Battery_Type
 FROM dbo.ev_battery_data
 GROUP BY Battery_Type;
 
-
 -- =================================================================================
 -- Query 2: Country of Origin Health Performance
 -- Description: Evaluates average State of Health (SoH) grouped by manufacturer 
 --              country, handling missing lookup values with default labels.
 -- =================================================================================
 
--- [We will write this tomorrow!]
-
+-- 
+SELECT
+ISNULL(t2.Manufacturer_Country, 'UNKNOWN') AS Manufacturer_Country,
+COUNT(t1.Vehicle_ID) AS Vehicle_Count,
+ROUND(AVG(t1.SoH_Percent), 2) AS Avg_SoH_Percent
+FROM dbo.ev_battery_data t1
+FULL OUTER JOIN dbo.car_info AS t2
+ON t1.Car_Model = t2.Car_Model
+GROUP BY Manufacturer_Country
+ORDER BY Avg_SoH_Percent DESC;
 
 -- =================================================================================
 -- Query 3: Identifying High-Risk Vehicles for Maintenance
