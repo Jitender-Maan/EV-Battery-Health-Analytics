@@ -270,7 +270,48 @@ Wuling Air EV	Wuling Air EV	China
 ### 5. How It Got Cleared
 	   N/A	
 ### 6. Real-World Use In My Project
-	   When Eevr working with more then one table & want to find missing values we use join. 	
+	   When Eevr working with more then one table & want to find missing values we use join.
+___________________________________________________________________
+
+## Day 8 — NULL Values (ISNULL / COALESCE) 
+
+**Date:** 26-05-2026
+
+### 1. What I Learned Today
+Today i learned how to handle NULL values.
+ISNULL works with column having null & a new value on the place of null.
+COALESCE works same but it is a ANSI-standard SQL. works fine when you migrate your project from SSMS to another database engine (like PostgreSQL, Snowflake, or BigQuery)
+
+### 2. Key Rules / Points
+- When using IS NULL function in select clause must be one word with no space like ISNULL.
+- COALESCE is ANSI Standard SQL easy to migrate project to another DB engine.  
+- COALESCE look at more that 2 columns & return first non null value & finds from left to right.
+
+### 3. Example Query I Wrote
+```sql
+SELECT DISTINCT
+COALESCE(t1.Car_Model, t2.Car_Model) AS Car_Model,
+COALESCE(t2.Manufacturer_Country, 'Unknown') AS Manufacturer_Country
+FROM dbo.ev_battery_data AS t1
+FULL OUTER JOIN dbo.car_info AS t2
+ON t1.Car_Model = t2.Car_Model;
+```
+Result:
+		Nissan Leaf	Japan
+		Hyundai Ioniq 5	South Korea
+		Wuling Air EV	China
+		Rivian R1T	USA
+		BYD Atto 3	China
+		Tesla Model 3	USA
+		Ford Mustang Mach-E	USA
+		Kia EV6	Unknown
+
+### 4. What Confused Me
+   	I confused using IS NULL in select clause
+### 5. How It Got Cleared
+   	i forgot using ISNULL without space as a single word, then i remove space & result of query cleared the confussion.
+### 6. Real-World Use In My Project
+   	We Use ISNULL & COALESCE while handling null values in sql queries in our peoject.
 ___________________________________________________________________
 
 ## Day [X] — [Topic Name]
