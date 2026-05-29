@@ -314,6 +314,45 @@ Result:
    	We Use ISNULL & COALESCE while handling null values in sql queries in our peoject.
 ___________________________________________________________________
 
+## Day 9 — Subqueries (Part 1)
+
+**Date:** 27-05-2026
+
+### 1. What I Learned Today
+Today I Learned about Subquery which is Query in Query
+like we filter our result of a query by writing another query within that.
+
+### 2. Key Rules / Points
+- we use operators while using subqueries if the result is a single value.
+- USE IN when subquery result in multiple values.
+- Subquery is good option for joins.
+### 3. Example Query I Wrote
+```sql
+SELECT TOP 10
+Vehicle_ID, Car_Model, SoH_Percent 
+from dbo.ev_battery_data
+where Car_Model IN (SELECT Car_Model FROM dbo.car_info WHERE Manufacturer_Country = 'USA');
+```
+Result: 
+		001f6ebb	Tesla Model 3	100
+		003b6c06	Tesla Model 3	96.3300018310547
+		005b98a6	Ford Mustang Mach-E	97.75
+		006a15a1	Ford Mustang Mach-E	99.0500030517578
+		007cc32f	Tesla Model 3	88.2600021362305
+		009ed9aa	Ford Mustang Mach-E	97.4400024414063
+		00a093a9	Ford Mustang Mach-E	97.2699966430664
+		00a50f31	Ford Mustang Mach-E	99.6900024414063
+		00a78e6e	Ford Mustang Mach-E	97.6999969482422
+		00a83afc	Ford Mustang Mach-E	90.8499984741211
+
+### 4. What Confused Me
+	   No Confussion today
+### 5. How It Got Cleared
+	   N/A	
+### 6. Real-World Use In My Project
+	   When use two or more tables & want to filter result accourding to another column condition we use subqueries.
+___________________________________________________________________
+
 ## Day [X] — [Topic Name]
 
 **Date:** [DD-MM-YYYY]
