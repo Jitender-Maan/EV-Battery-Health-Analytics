@@ -425,3 +425,66 @@ Day 14 (Tue, 02-06-2026) — Phase 2 — Python EDA starts (All Python dates shi
 
 ## Today's Date Context
 Day 8 was completed on 26-05-2026
+
+EV Battery Health Analytics — New Chat Summary
+User: Jitender Maan
+Repo: EV-Battery-Health-Analytics-
+Current Phase: Phase 1 — SQL
+Tool: SSMS
+Database: EV_Projects
+Main Table: dbo.ev_battery_data
+Extra Table Created: dbo.car_info
+Rows in main table: 10,000 verified
+
+Project Context
+Project Title: Predictive Battery Health Analytics for Electric Vehicles
+Dataset: EV Battery Degradation & Charge (Kaggle)
+Target Variable: SoH_Percent
+Problem Type: Regression (Battery_Status is too imbalanced for classification)
+User Skill Level
+Python: Beginner
+SQL: Beginner
+Power BI: Intermediate
+Working Rules (IMPORTANT)
+Ask one question at a time
+Wait for my answer before moving forward
+Explain concept before I apply it
+I write my own code and notes (No copy-pasting code/notes from assistant)
+Do not give ready-made queries/full solutions
+Do not overload
+Wrong answers = learning opportunity
+If I say “don’t help me,” step back immediately
+SQL Bootcamp Progress
+Day 1 — Aggregate Functions ✅ (COUNT, SUM, AVG, MIN, MAX)
+Day 2 — GROUP BY / ORDER BY / ROUND ✅ (Grouping, sorting, and rounding results)
+Day 3 — HAVING vs WHERE ✅ (WHERE filters rows, HAVING filters grouped results)
+Day 4 — AND / OR / Parentheses ✅ (Multiple conditions and logic precedence)
+Day 5 — CASE WHEN ✅ (Custom categories and repeating CASE logic in GROUP BY)
+Day 6 — INNER JOIN ✅ (Joining tables, ON clause, and aliases)
+Day 7 — LEFT JOIN / RIGHT JOIN / FULL JOIN ✅ (Kept unmatched rows, used IS NULL to find missing reference data)
+Day 8 — Handling NULL Values (ISNULL / COALESCE) ✅ (Replaced NULLs in SELECT statements, fixed space issues in ISNULL(), mastered COALESCE as ANSI-standard SQL fallback)
+Day 9 — Subqueries (Part 1) ✅ (Completed: 27-05-2026)
+Learned the core concept of nested queries (inner vs. outer). Mastered Single-Value subqueries (using standard operators like >) and Multi-Value subqueries (using IN). Practiced using subqueries as an alternative to JOIN for filtering main table data based on another table's conditions.
+Tables Available
+dbo.ev_battery_data (10,000 rows. Columns: Vehicle_ID, Car_Model, Battery_Type, Battery_Capacity_kWh, Vehicle_Age_Months, Total_Charging_Cycles, Avg_Temperature_C, Fast_Charge_Ratio, Avg_Discharge_Rate_C, Driving_Style, Internal_Resistance_Ohm, SoH_Percent, Battery_Status)
+dbo.car_info (Lookup table. Columns: Car_Model, Manufacturer_Country, Launch_Year)
+Key Findings So Far
+Wuling Air EV has highest average SoH: 96.99
+NMC has highest average internal resistance: 0.0349
+267 vehicles matched stressed condition: high temp + high discharge rate
+778 Tesla Model 3 matched age/cycle risk logic
+Battery health categories: Healthy (9390), Warning (609), Critical (1)
+Average SoH by country via JOIN: China highest: 96.95
+Day 9 Subqueries Finding: Successfully queried all USA manufactured vehicles (Tesla Model 3 and Ford Mustang Mach-E) using a clean WHERE Car_Model IN (SELECT ...) subquery, returning 4,017 matching rows.
+Notes System
+User maintains notes in sql_notes.md manually. Day 1 to Day 9 notes are completed.
+Revised SQL Bootcamp Schedule (Confirmed)
+Day 9 (Wed, 27-05-2026) — Subqueries (Part 1) ✅
+Day 10 (Thu, 28-05-2026) — Subqueries (Part 2) 🕒 Next Topic (Practice advanced nested queries)
+Day 11 (Fri, 29-05-2026) — Window Functions (ROW_NUMBER, RANK) (Practice + Notes)
+Day 12 (Sat, 30-05-2026) — Project Query 1–3 (Business questions on SoH)
+Sunday (31-05-2026) — OFF 🛌
+Day 13 (Mon, 01-06-2026) — Project Query 4–7 (Charging behavior analysis)
+Day 14 (Tue, 02-06-2026) — Project Query 8–12 & Commit Phase 1 to GitHub
+## Today's Date Context
+Day 9 was completed on 27-05-2026
