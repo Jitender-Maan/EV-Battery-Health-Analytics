@@ -311,7 +311,7 @@ Result:
 ### 5. How It Got Cleared
    	i forgot using ISNULL without space as a single word, then i remove space & result of query cleared the confussion.
 ### 6. Real-World Use In My Project
-   	We Use ISNULL & COALESCE while handling null values in sql queries in our peoject.
+   	We Use ISNULL & COALESCE while handling null values in sql queries in our project.
 ___________________________________________________________________
 
 ## Day 9 — Subqueries (Part 1)
@@ -391,4 +391,44 @@ Result:
 	   Explore the corelation between tables inside subquery & i understand how to use that using instances. 	
 ### 7. Real-World Use In My Project
 	   When ever we want to get the column data & their avg or other aggrigate functions values shown in the result side by side we use subquery.
+___________________________________________________________________
+
+## Day 11 — Window Functions (ROW_NUMBER, RANK, DENSE_RANK)
+
+**Date:** 29-05-2026
+
+### 1. What I Learned Today
+Today i learned about windows functions Like ROW_NUMBER, RANK & DENSE_RANK
+ROW_NUMBER 
+
+### 2. Key Rules / Points
+- USE subqueries in SELECT Clause by using Where Clause
+- We can use 2 instances of same table while using subquery, one for main 
+- When subquery return multiple value then sql server threw error, reason behind it is sql cofused which one he use.  
+### 3. Example Query I Wrote
+```sql
+SELECT TOP 10
+Vehicle_ID, Battery_Type, Internal_Resistance_Ohm
+FROM dbo.ev_battery_data as t1
+WHERE Internal_Resistance_Ohm > (SELECT AVG(Internal_Resistance_Ohm) FROM dbo.ev_battery_data as t2 WHERE t1.Battery_Type = t2.Battery_Type);
+```
+Result:
+		003cf549	NMC	0.035300001502037
+		003dd4ca	NMC	0.0366000011563301
+		007cc32f	NMC	0.0548000000417233
+		00a83afc	NMC	0.0472000017762184
+		00b1a4ab	NMC	0.0575999990105629
+		00ea140c	NMC	0.0390999987721443
+		00ea4f2f	NMC	0.0390000008046627
+		00fd9ae7	NMC	0.0428999997675419
+		010b09fe	NMC	0.0595000013709068
+		014a258c	NMC	0.0359999984502792
+
+### 4. What Confused Me
+	   Correlate the two tables inside the subquery's WHERE clause on the matching Battery_Type column.
+### 6. How It Got Cleared
+	   Explore the corelation between tables inside subquery & i understand how to use that using instances. 	
+### 7. Real-World Use In My Project
+	   When ever we want to get the column data & their avg or other aggrigate functions values shown in the result side by side we use subquery.
+	   
 	   
