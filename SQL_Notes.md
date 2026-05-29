@@ -399,36 +399,37 @@ ___________________________________________________________________
 
 ### 1. What I Learned Today
 Today i learned about windows functions Like ROW_NUMBER, RANK & DENSE_RANK
-ROW_NUMBER 
-
+ROW_NUMBER Assign Unique Sequential values & ignore ties.
+RANK Assign a ranking to each row ignore ties, gives same rank to tied rows.
+DENSE_RANK Same as rank it gives same rank to tied row same rank. does not skip any numbers.
 ### 2. Key Rules / Points
-- USE subqueries in SELECT Clause by using Where Clause
-- We can use 2 instances of same table while using subquery, one for main 
-- When subquery return multiple value then sql server threw error, reason behind it is sql cofused which one he use.  
+- RANK asigns different numbers for tied rows
+- The only diffference between RANK & DANSE_RANK is RANK assign same rank to tied rows & skip rank for next, but DANSE_RANK assign same rank to tied rows but not skip rank.
+- PARTITION BY & ORDER BY used inside subqueries to group & arrange respectivly.  
 ### 3. Example Query I Wrote
 ```sql
-SELECT TOP 10
-Vehicle_ID, Battery_Type, Internal_Resistance_Ohm
-FROM dbo.ev_battery_data as t1
-WHERE Internal_Resistance_Ohm > (SELECT AVG(Internal_Resistance_Ohm) FROM dbo.ev_battery_data as t2 WHERE t1.Battery_Type = t2.Battery_Type);
+SELECT Vehicle_ID, Battery_Type, SoH_Percent,
+RANK() OVER (PARTITION BY Battery_Type ORDER BY SoH_Percent DESC) AS SoH_Rank,
+DENSE_RANK() OVER (PARTITION BY Battery_Type ORDER BY SoH_Percent DESC) AS SoH_Dense_Rank
+FROM dbo.ev_battery_data;
 ```
 Result:
-		003cf549	NMC	0.035300001502037
-		003dd4ca	NMC	0.0366000011563301
-		007cc32f	NMC	0.0548000000417233
-		00a83afc	NMC	0.0472000017762184
-		00b1a4ab	NMC	0.0575999990105629
-		00ea140c	NMC	0.0390999987721443
-		00ea4f2f	NMC	0.0390000008046627
-		00fd9ae7	NMC	0.0428999997675419
-		010b09fe	NMC	0.0595000013709068
-		014a258c	NMC	0.0359999984502792
+		010f3c9c	LFP	100	1	1
+		03c9d3b3	LFP	100	1	1
+		03dae574	LFP	100	1	1
+		0503f12d	LFP	100	1	1
+		0865a965	LFP	100	1	1
+		098af993	LFP	100	1	1
+		09f3058e	LFP	100	1	1
+		0ce9bca1	LFP	100	1	1
+		0dc4373b	LFP	100	1	1
+		0fc77b1d	LFP	100	1	1
 
 ### 4. What Confused Me
-	   Correlate the two tables inside the subquery's WHERE clause on the matching Battery_Type column.
+	   Where to use window function like RANK in query, before FROM or After From.
 ### 6. How It Got Cleared
-	   Explore the corelation between tables inside subquery & i understand how to use that using instances. 	
+	   I Explore a bit & identify it works when used above FROM Clause. as query runs perfectly the confussion cleared. 	
 ### 7. Real-World Use In My Project
-	   When ever we want to get the column data & their avg or other aggrigate functions values shown in the result side by side we use subquery.
+	   We will use windows function when ever need to rank the result with RANK OR ROW_NUMBER OR DENSE_RANK
 	   
 	   
