@@ -52,4 +52,9 @@ ORDER BY Avg_SoH_Percent DESC;
 --              degradation (SoH < 90%), and critical status flags.
 -- =================================================================================
 
--- [We will write this tomorrow!]
+-- 
+SELECT Vehicle_ID, Car_Model, Vehicle_Age_Months, SoH_Percent, Battery_Status
+FROM dbo.ev_battery_data
+WHERE (SoH_Percent < 90 AND Vehicle_Age_Months > 24) OR (Battery_Status IN ('Critical', 'Warning'))
+ORDER BY SoH_Percent ASC;
+
