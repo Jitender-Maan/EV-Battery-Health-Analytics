@@ -431,5 +431,43 @@ Result:
 	   I Explore a bit & identify it works when used above FROM Clause. as query runs perfectly the confussion cleared. 	
 ### 7. Real-World Use In My Project
 	   We will use windows function when ever need to rank the result with RANK OR ROW_NUMBER OR DENSE_RANK
+___________________________________________________________________
 	   
-	   
+## Day 12 — 
+
+**Date:** 29-05-2026
+
+### 1. What I Learned Today
+Today i learned about windows functions Like ROW_NUMBER, RANK & DENSE_RANK
+ROW_NUMBER Assign Unique Sequential values & ignore ties.
+RANK Assign a ranking to each row ignore ties, gives same rank to tied rows.
+DENSE_RANK Same as rank it gives same rank to tied row same rank. does not skip any numbers.
+### 2. Key Rules / Points
+- RANK asigns different numbers for tied rows
+- The only diffference between RANK & DANSE_RANK is RANK assign same rank to tied rows & skip rank for next, but DANSE_RANK assign same rank to tied rows but not skip rank.
+- PARTITION BY & ORDER BY used inside subqueries to group & arrange respectivly.  
+### 3. Example Query I Wrote
+```sql
+SELECT Vehicle_ID, Battery_Type, SoH_Percent,
+RANK() OVER (PARTITION BY Battery_Type ORDER BY SoH_Percent DESC) AS SoH_Rank,
+DENSE_RANK() OVER (PARTITION BY Battery_Type ORDER BY SoH_Percent DESC) AS SoH_Dense_Rank
+FROM dbo.ev_battery_data;
+```
+Result:
+		010f3c9c	LFP	100	1	1
+		03c9d3b3	LFP	100	1	1
+		03dae574	LFP	100	1	1
+		0503f12d	LFP	100	1	1
+		0865a965	LFP	100	1	1
+		098af993	LFP	100	1	1
+		09f3058e	LFP	100	1	1
+		0ce9bca1	LFP	100	1	1
+		0dc4373b	LFP	100	1	1
+		0fc77b1d	LFP	100	1	1
+
+### 4. What Confused Me
+	   Where to use window function like RANK in query, before FROM or After From.
+### 6. How It Got Cleared
+	   I Explore a bit & identify it works when used above FROM Clause. as query runs perfectly the confussion cleared. 	
+### 7. Real-World Use In My Project
+	   We will use windows function when ever need to rank the result with RANK OR ROW_NUMBER OR DENSE_RANK	   
