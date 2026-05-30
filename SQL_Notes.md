@@ -433,15 +433,16 @@ Result:
 	   We will use windows function when ever need to rank the result with RANK OR ROW_NUMBER OR DENSE_RANK
 ___________________________________________________________________
 	   
-## Day 12 — 
+## Day 12 — Business questions on SoH
 
 **Date:** 29-05-2026
 
-### 1. What I Learned Today
-Today i learned about windows functions Like ROW_NUMBER, RANK & DENSE_RANK
-ROW_NUMBER Assign Unique Sequential values & ignore ties.
-RANK Assign a ranking to each row ignore ties, gives same rank to tied rows.
-DENSE_RANK Same as rank it gives same rank to tied row same rank. does not skip any numbers.
+### 1. What I Do Today
+	   Today i Started phase 1 of the project queries.
+	   I work on 3 business queries on SOH(State of Health)
+	   In Query 1 I use  aggregate functions like COUNT, AVG, MIN, MAX. & group by to get categorised results by battery type which LFP & 	   NMC
+	   In Query 2 I use joins & ISNULL 
+	   IN Query 3 I use logical filtering using where & order by.
 ### 2. Key Rules / Points
 - RANK asigns different numbers for tied rows
 - The only diffference between RANK & DANSE_RANK is RANK assign same rank to tied rows & skip rank for next, but DANSE_RANK assign same rank to tied rows but not skip rank.
