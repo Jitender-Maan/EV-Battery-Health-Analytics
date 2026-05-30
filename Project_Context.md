@@ -612,3 +612,51 @@ Day 13 — 01-06-2026 (Mon) | 9:30–10:30 AM: Charging behavior analysis | 10:3
 Day 14 — 02-06-2026 (Tue) | 9:30–10:30 AM: Final SQL analysis | 10:30–11:30 AM: Commit Phase 1 to GitHub
 ## Today's Date Context
 Day 11 was completed on 29-05-2026
+
+EV Battery Health Analytics — New Chat Summary
+User: Jitender Maan
+Repo: EV-Battery-Health-Analytics-
+Current Phase: Phase 1 — SQL
+Tool: SSMS
+Database: EV_Projects
+Main Table: dbo.ev_battery_data
+Extra Table Created: dbo.car_info
+Rows in main table: 10,000 verified
+
+Project Context
+Project Title: Predictive Battery Health Analytics for Electric Vehicles
+Dataset: EV Battery Degradation & Charge (Kaggle)
+Target Variable: SoH_Percent
+Problem Type: Regression (Battery_Status is too imbalanced for classification)
+User Skill Level
+Python: Beginner
+SQL: Beginner
+Power BI: Intermediate
+Working Rules (IMPORTANT)
+Ask one question at a time
+Wait for my answer before moving forward
+Explain concept before I apply it
+I write my own code and notes (No copy-pasting code/notes from assistant)
+Do not give ready-made queries/full solutions
+Do not overload
+Wrong answers = learning opportunity
+If I say “don’t help me,” step back immediately
+SQL Bootcamp Progress
+Day 1 — Day 11: Core SQL foundations (Aggregates, Grouping, Having, Joins, NULL handling with ISNULL/COALESCE, Subqueries, and Window Functions like ROW_NUMBER/RANK/DENSE_RANK) completed and documented in sql_notes.md.
+Day 12 — Project Queries 1–3 ✅ (Completed: 30-05-2026)
+Created the main SQL project script: EV-Battery-Health-queries.sql with professional GitHub headers and batch separators (USE/GO).
+Query 1 (Battery Chemistry Analysis): Grouped by Battery_Type to compare LFP and NMC average, min, and max SoH, alongside average internal resistance. NMC showed higher average resistance (0.0349 Ohms) and lower average SoH (95.05%) compared to LFP (0.0261 resistance, 96.95% SoH).
+Query 2 (Country Origin Analysis): Performed a FULL OUTER JOIN to group by Manufacturer_Country. Successfully utilized ISNULL to show 'UNKNOWN' for missing lookup models (Kia EV6) and preserved unmatched lookup records like Japan (Nissan Leaf with 0 test vehicles). China has highest average SoH (96.95%).
+Query 3 (High-Risk Vehicle Inspection): Combined conditions using explicit OR and IN logic with parentheses: (SoH_Percent < 90 AND Vehicle_Age_Months > 24) OR (Battery_Status IN ('Critical', 'Warning')). Returned exactly 605 priority inspection rows sorted by lowest health first.
+Tables Available
+dbo.ev_battery_data (10,000 rows)
+dbo.car_info (Lookup table)
+Notes System
+User maintains notes in sql_notes.md manually. Day 1 to Day 11 notes are completed. Day 12 project queries are saved in EV-Battery-Health-queries.sql.
+Master Schedule (Days 13–15)
+— — 31-05-2026 (Sun) | 🛌 OFF — Rest Day
+Day 13 — 01-06-2026 (Mon) | 9:30–10:30 AM: Charging behavior analysis | 10:30–11:30 AM: Write to EV-Battery-Health-queries.sql (Queries 4–7) 🕒 Next Topic
+Day 14 — 02-06-2026 (Tue) | 9:30–10:30 AM: Final SQL analysis (Queries 8–12) | 10:30–11:30 AM: Commit Phase 1 to GitHub
+Day 15 — 03-06-2026 (Wed) | 9:30 AM: Phase 2 — Python EDA starts!
+## Today's Date Context
+Day 12 was completed on 30-05-2026
