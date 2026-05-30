@@ -441,12 +441,12 @@ ___________________________________________________________________
 	   Today i Started phase 1 of the project queries.
 	   I work on 3 business queries on SOH(State of Health)
 	   In Query 1 I use  aggregate functions like COUNT, AVG, MIN, MAX. & group by to get categorised results by battery type which LFP & 	   NMC
-	   In Query 2 I use joins & ISNULL 
-	   IN Query 3 I use logical filtering using where & order by.
+	   In Query 2 I use joins & ISNULL, Group by & order by use get the result grouped by Manufacturer_Country. 
+	   IN Query 3 I use logical filtering using where & order by to get result according to our filter like we use in where clause.
 ### 2. Key Rules / Points
-- RANK asigns different numbers for tied rows
-- The only diffference between RANK & DANSE_RANK is RANK assign same rank to tied rows & skip rank for next, but DANSE_RANK assign same rank to tied rows but not skip rank.
-- PARTITION BY & ORDER BY used inside subqueries to group & arrange respectivly.  
+	-  
+	-
+	-   
 ### 3. Example Query I Wrote
 ```sql
 SELECT Vehicle_ID, Battery_Type, SoH_Percent,
